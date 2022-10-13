@@ -1,26 +1,30 @@
 (ns dev.joakim
-  (:require [quil.core :as q :include-macros true]))
+  (:require [quil.core :as q]
+            [quil.middleware :as m]))
 
-(def rect-width 10)
+(def cell-width 10)
+
+(def cells [[10 10] [12 15]])
 
 (defn setup []
-  (q/frame-rate 50)
-  (q/background 220))
-
-(defn random-coord []
-  (-> (q/random (q/width))
-      (quot rect-width)
-      (* rect-width)))
-
-(defn draw []
+  (q/frame-rate 2)
+  (q/background 220)
   (q/fill 120)
+  cells)
 
-  (let [x (random-coord)
-        y (random-coord)]
-    (q/rect x y rect-width rect-width)))
+(defn draw [cells]
+  (doseq [[x y] cells]
+    (q/rect (* x cell-width)
+            (* y cell-width)
+            cell-width
+            cell-width)))
 
-(q/defsketch game-of-life
-             :title "Game of life"
-             :setup setup
-             :draw draw
-             :size [800 600])
+(defn animate []
+    (q/defsketch game-of-life
+                 :title "Game of life"
+                 :setup setup
+                 :draw draw
+                 :size [800 600]
+                 :middleware [m/fun-mode]))
+
+(animate)
