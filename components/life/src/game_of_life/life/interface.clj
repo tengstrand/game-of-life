@@ -12,3 +12,6 @@
 
 (defn create? [cell cells]
   (core/create? cell cells))
+
+(defn cells-to-create [cells]
+  (core/cells-to-create cells))

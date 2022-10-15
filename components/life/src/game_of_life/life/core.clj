@@ -57,3 +57,8 @@
 (defn create? [cell cells]
   (and (not (alive? cell cells))
        (= 3 (count-neighbors cell cells))))
+
+(defn cells-to-create [cells]
+  (set (filter #(create? % cells)
+               (into #{}
+                     (mapcat neighbors cells)))))
