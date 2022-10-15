@@ -62,3 +62,6 @@
   (set (filter #(create? % cells)
                (into #{}
                      (mapcat neighbors cells)))))
+
+(defn cells-that-survive [cells]
+  (set (filter #(survives? % cells) cells)))
