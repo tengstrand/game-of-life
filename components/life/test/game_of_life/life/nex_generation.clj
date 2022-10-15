@@ -1,4 +1,4 @@
-(ns game-of-life.life.new-generation
+(ns game-of-life.life.nex-generation
   (:require [clojure.test :refer :all]
             [game-of-life.life.interface :as life]
             [game-of-life.grid.interface :as grid]))
@@ -11,15 +11,15 @@
   (is (= ["-x--"
           "--xx"
           "-xx-"]
-         (grid/grid (life/new-generation glider)))))
+         (grid/grid (life/next-generation glider)))))
 
 (deftest second-generation
   (is (= ["--x-"
           "---x"
           "-xxx"]
-       (grid/grid (-> glider
-                      life/new-generation
-                      life/new-generation)))))
+         (grid/grid (-> glider
+                        life/next-generation
+                        life/next-generation)))))
 
 (deftest third-generation
   (is (= ["----"
@@ -27,6 +27,6 @@
           "--xx"
           "--x-"]
          (grid/grid (-> glider
-                        life/new-generation
-                        life/new-generation
-                        life/new-generation)))))
+                        life/next-generation
+                        life/next-generation
+                        life/next-generation)))))

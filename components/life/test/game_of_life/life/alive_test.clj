@@ -1,6 +1,6 @@
 (ns game-of-life.life.alive-test
   (:require [clojure.test :refer :all]
-            [game-of-life.life.interface :as life]))
+            [game-of-life.life.core :as life]))
 
 (deftest is-cell-alive?
   (is (= true

@@ -1,7 +1,7 @@
 (ns game-of-life.life.create-test
   (:require [clojure.test :refer :all]
             [game-of-life.grid.interface :as grid]
-            [game-of-life.life.interface :as life]))
+            [game-of-life.life.core :as life]))
 
 (def cells (grid/cells ["xxx-"
                         "-x--"

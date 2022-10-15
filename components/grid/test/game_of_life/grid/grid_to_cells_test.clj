@@ -10,4 +10,4 @@
 
 (deftest grid
   (is (= glider
-         (cells-to-grid/grid glider-cells))))
+         (grid/grid glider-cells))))
