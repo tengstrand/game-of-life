@@ -1,16 +1,7 @@
-(ns game-of-life.life.interface-test
+(ns game-of-life.life.count-neighbors-test
   (:require [clojure.test :refer :all]
             [game-of-life.grid.interface :as grid]
             [game-of-life.life.interface :as life]))
-
-(deftest is-cell-alive?
-  (is (= true
-         (life/alive? [0 0] #{[0 0]}))))
-
-(deftest is-cell-dead?
-  (is (= false
-         (life/alive? [1 0] #{[0 0]}))))
-
 
 (def cells (grid/cells ["--x"
                         "-x-"

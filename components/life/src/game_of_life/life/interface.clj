@@ -6,3 +6,6 @@
 
 (defn count-neighbors [cell cells]
   (core/count-neighbors cell cells))
+
+(defn survives? [cell cells]
+  (core/survives? cell cells))
