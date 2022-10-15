@@ -1,4 +1,4 @@
-(ns game-of-life.life.cells-that-survives
+(ns game-of-life.life.cells-that-survive
   (:require [clojure.test :refer :all]
             [game-of-life.grid.interface :as grid]
             [game-of-life.life.core :as life]))
