@@ -9,3 +9,6 @@
 
 (defn survives? [cell cells]
   (core/survives? cell cells))
+
+(defn create? [cell cells]
+  (core/create? cell cells))

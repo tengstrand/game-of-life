@@ -1,5 +1,6 @@
 (ns game-of-life.life.core
-  (:require [clojure.set :as set]))
+  (:require [clojure.set :as set]
+            [game-of-life.grid.interface :as grid]))
 
 ;; - Any live cell with two or three live neighbours survives.
 ;; - Any dead cell with three live neighbours becomes a live cell.
@@ -52,3 +53,7 @@
 (defn survives? [cell cells]
   (contains? #{2 3}
              (count-neighbors cell cells)))
+
+(defn create? [cell cells]
+  (and (not (alive? cell cells))
+       (= 3 (count-neighbors cell cells))))
