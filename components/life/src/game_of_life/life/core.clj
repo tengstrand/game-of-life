@@ -65,3 +65,7 @@
 
 (defn cells-that-survive [cells]
   (set (filter #(survives? % cells) cells)))
+
+(defn new-generation [cells]
+  (set/union (cells-to-create cells)
+             (cells-that-survive cells)))

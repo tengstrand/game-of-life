@@ -1,4 +1,4 @@
-(ns game-of-life.grid.core)
+(ns game-of-life.grid.grid-to-cells)
 
 (defn x-indexes
   "Takes a grid row, e.g. '---x--', and returns the
