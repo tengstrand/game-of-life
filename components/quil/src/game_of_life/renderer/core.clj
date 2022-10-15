@@ -8,18 +8,17 @@
 (def cell-color 120)
 (def background-color 220)
 
+(def start-grid (atom #{}))
 (def prev-cells (atom #{}))
 (def cells (atom #{}))
 
-(def glider (grid/cells ["--x"
-                         "x-x"
-                         "-xx"]))
-
-(defn restart []
-  (reset! cells glider))
+(defn init-grid [grid]
+   (let [grid-cells (grid/cells grid)]
+     (reset! cells grid-cells)
+     (reset! start-grid grid)))
 
 (defn setup []
-  (restart)
+  (init-grid @start-grid)
   (q/frame-rate 10)
   (q/stroke background-color)
   (q/background background-color))

@@ -6,7 +6,7 @@
   []
   (core/animate))
 
-(defn restart
-  "Restart from the initial position."
-  []
-  (core/restart))
+(defn init-grid
+  "Set the initial grid."
+  [grid]
+  (core/init-grid grid))

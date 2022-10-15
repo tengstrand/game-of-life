@@ -10,9 +10,9 @@
   </component>
   <component name="DepsProjectsManager">
     <option name="projectFiles">
-      <set>
+      <list>
         <option value="file://$PROJECT_DIR$/deps.edn" />
-      </set>
+      </list>
     </option>
   </component>
 </project>
