@@ -1,10 +1,12 @@
 {:aliases  {:dev {:extra-paths ["development/src"
+                                "components/grid/src"
                                 "components/life/src"
                                 "components/quil/src"]
                   :extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}
                                quil/quil {:mvn/version "4.0.0-SNAPSHOT-1"}}}
 
-            :test {:extra-paths ["components/life/test"
+            :test {:extra-paths ["components/grid/test"
+                                 "components/life/test"
                                  "components/quil/test"]}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
