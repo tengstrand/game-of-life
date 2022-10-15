@@ -15,3 +15,6 @@
 
 (defn cells-to-create [cells]
   (core/cells-to-create cells))
+
+(defn new-generation [cells]
+  (core/new-generation cells))
