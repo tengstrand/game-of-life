@@ -29,9 +29,11 @@ $ clj -M:poly
 
 <img src="poly-shell.png" width="70%" alt="poly shell">
 
-And then type `info`:
+And then type `info :loc`:
 
 ![workspace.png](workspace.png)
+
+As you can see, the number of lines of code is 170 + 160 lines of test code.
 
 The poly tool documentation can be found [here](https://polylith.gitbook.io/poly).
 The list of available commands can be shown by typing `help` from the poly shell.
