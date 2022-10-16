@@ -31,7 +31,7 @@ $ clj -M:poly
 
 And then type `info :loc`:
 
-<img src="workspace.png" width="70%" alt="poly shell">
+<img src="workspace.png" width="50%" alt="poly shell">
 
 As you can see, the number of lines of code is 170 + 160 lines of test code.
 
