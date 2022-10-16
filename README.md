@@ -1,7 +1,7 @@
 # Game of life
 
 This is [Game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) 
-implemented in Clojure,
+implemented in [Clojure](https://clojure.org),
 using the [Polylith](https://polylith.gitbook.io/polylith) architecture,
 and rendered by [Quil](https://github.com/quil/quil).
 
