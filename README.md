@@ -27,7 +27,7 @@ If you want to experiment with the poly tool, start a poly shell:
 $ clj -M:poly
 ```
 
-![poly-shell.png](poly-shell.png)
+<img src="poly-shell.png" width="70%" alt="poly shell">
 
 And then e.g. type `info` and press enter:
 
