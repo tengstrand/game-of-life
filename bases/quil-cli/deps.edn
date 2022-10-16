@@ -1,4 +1,4 @@
 {:paths ["src"]
- :deps {quil/quil {:mvn/version "4.0.0-SNAPSHOT-1"}}
+ :deps {}
  :aliases {:test {:extra-paths []
                   :extra-deps {}}}}

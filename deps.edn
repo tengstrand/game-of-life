@@ -1,13 +1,16 @@
 {:aliases  {:dev {:extra-paths ["development/src"
                                 "components/grid/src"
                                 "components/life/src"
-                                "components/quil/src"]
+                                "components/quil/src"
+                                "bases/quil-cli/src"]
                   :extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}
                                quil/quil {:mvn/version "4.0.0-SNAPSHOT-1"}}}
 
             :test {:extra-paths ["components/grid/test"
-                                 "components/life/test"
-                                 "components/quil/test"]}
+                                 "components/life/test"]}
+
+            :quil {:main-opts  ["-m" "game-of-life.quil-cli.core"]
+                   :extra-deps {cli/quil {:local/root "projects/cli"}}}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polyfy/polylith

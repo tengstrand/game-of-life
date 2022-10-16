@@ -8,4 +8,4 @@
    - All other live cells die in the next generation.
      Similarly, all other dead cells stay dead."
   [cells]
-  (core/nex-generation cells))
+  (core/next-generation cells))

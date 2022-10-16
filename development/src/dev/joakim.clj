@@ -2,8 +2,9 @@
   (:require [game-of-life.renderer.interface :as renderer]))
 
 (comment
-  (renderer/init-grid ["--x"
-                       "x-x"
-                       "-xx"]) ; The start grid has a glider.
-  (renderer/animate) ; Open window and start animate
+  (renderer/animate ["--x"
+                     "x-x"
+                     "-xx"]) ; Open window and start animate the given grid.
+  ;(renderer/init-grid ["--x"])
+
   #__)

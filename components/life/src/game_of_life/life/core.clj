@@ -1,9 +1,9 @@
 (ns game-of-life.life.core
   (:require [clojure.set :as set]))
 
-(def offsets [[-1 -1] [0 -1] [1 -1]
-              [-1 0] [1 0]
-              [-1 1] [0 1] [1 1]])
+(def deltas [[-1 -1] [0 -1] [1 -1]
+             [-1 0] [1 0]
+             [-1 1] [0 1] [1 1]])
 
 (defn alive? [cell cells]
   (contains? cells cell))
@@ -14,7 +14,7 @@
 
 (defn neighbors [cell]
   (set (mapv #(neighbor cell %)
-             offsets)))
+             deltas)))
 
 (defn count-neighbors [cell cells]
   (count (set/intersection cells
@@ -36,6 +36,6 @@
 (defn cells-that-survive [cells]
   (set (filter #(survives? % cells) cells)))
 
-(defn nex-generation [cells]
+(defn next-generation [cells]
   (set/union (cells-to-create cells)
              (cells-that-survive cells)))

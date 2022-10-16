@@ -2,11 +2,11 @@
   (:require [game-of-life.renderer.core :as core]))
 
 (defn animate
-  "Open a window and start animate."
-  []
-  (core/animate))
-
-(defn init-grid
-  "Set the initial grid."
+  "Opens a window and animates the given grid."
   [grid]
-  (core/init-grid grid))
+  (core/animate grid))
+
+(defn reset-grid
+  "Uses to reset the grid while animating."
+  [grid]
+  (core/reset-grid grid))

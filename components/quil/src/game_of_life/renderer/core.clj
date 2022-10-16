@@ -12,13 +12,13 @@
 (def prev-cells (atom #{}))
 (def cells (atom #{}))
 
-(defn init-grid [grid]
+(defn reset-grid [grid]
    (let [grid-cells (grid/cells grid)]
      (reset! cells grid-cells)
      (reset! start-grid grid)))
 
 (defn setup []
-  (init-grid @start-grid)
+  (reset-grid @start-grid)
   (q/frame-rate 10)
   (q/stroke background-color)
   (q/background background-color))
@@ -37,9 +37,10 @@
   (reset! prev-cells @cells)
   (swap! cells life/next-generation))
 
-(defn animate []
+(defn animate [grid]
+  (reset-grid grid)
   (q/defsketch game-of-life
-               :title "Game of life"
+               :title "Game of life - using Quil"
                :setup setup
                :draw draw
                :size [800 600]))
