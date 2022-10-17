@@ -1,4 +1,4 @@
-(ns game-of-life.life.nex-generation
+(ns game-of-life.life.next-generation
   (:require [clojure.test :refer :all]
             [game-of-life.life.interface :as life]
             [game-of-life.grid.interface :as grid]))
