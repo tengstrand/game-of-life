@@ -11,20 +11,20 @@ The program simply animates a [glider](https://conwaylife.com/wiki/Glider):
 
 ### Prerequisites
 - git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- clj (https://clojure.org/guides/install_clojure)
+- clojure (https://clojure.org/guides/install_clojure)
 
 ### Clone + start
 ```
 $ git clone git@github.com:tengstrand/game-of-life.git
 $ cd game-of-life
-$ clj -M:quil
+$ clojure -M:quil
 ```
 
 ### The poly tool ###
 If you want to experiment with the poly tool, start a poly shell:
 
 ```
-$ clj -M:poly
+$ clojure -M:poly
 ```
 
 <img src="poly-shell.png" width="70%" alt="poly shell">
