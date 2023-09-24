@@ -1,4 +1,4 @@
-{:deps {org.clojure/clojure {:mvn/version "1.10.1"}
+{:deps {org.clojure/clojure {:mvn/version "1.11.1"}
 
         poly/grid {:local/root "../../components/grid"}
         poly/life {:local/root "../../components/life"}
