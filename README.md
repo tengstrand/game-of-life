@@ -35,5 +35,5 @@ And then type `info :loc`:
 
 As you can see, the number of lines of code is 170 + 160 lines of test code.
 
-The poly tool documentation can be found [here](https://polylith.gitbook.io/poly).
+The poly tool documentation can be found [here](https://cljdoc.org/d/polylith/clj-poly/CURRENT/doc/readme).
 The list of available commands can be shown by typing `help` from the poly shell.
